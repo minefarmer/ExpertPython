@@ -1,0 +1,116 @@
+                STRINGS
+
+    Strings are used to record textual information.
+>>> 'joe'
+'joe'
+>>> "joe"
+'joe'
+>>> """
+... python
+... is
+... easy
+... to
+... learn
+... """
+'\npython\nis\neasy\nto\nlearn\n'
+
+    Strings are called sequences. They are iterable.
+>>> s = "python"
+>>> print S[0]
+  File "<stdin>", line 1
+    print S[0]
+          ^
+SyntaxError: Missing parentheses in call to 'print'. Did you mean print(S[0])?
+>>> S = 'python'  # store a string as a variable
+>>> print(S[0])  # indexing
+p
+>>> 
+
+    Strings are inmutable - they cannot be changed in place afterthey are created.
+>>> S[0] = 'z'
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'str' object does not support item assignment
+
+
+    Strings have operations all their own, available as methods.
+
+
+
+                STRING OPERATIONS
+
+    Operations             Interpretation
+s.find('th')            	search
+s.strip()               	Remove whitespace
+s.replace('th','TH')    	Replacrment
+s.split(',')				Split on delimiter
+s.isdigit(), s.isalpha()	Content test          
+s.lower() and s.upper()		Case conversion
+s.endswidth('you')			End test
+s.join(iterable)			Delimiter join
+
+
+>>> S = "Joe is the best friend of you"
+>>> S.find('th')
+7
+>>> S = "Joe is the best friend of you       "
+>>> S.strip()
+'Joe is the best friend of you'
+>>> S.isdigit()
+False
+>>> S.isalpha()
+False
+>>> S.upper()
+'JOE IS THE BEST FRIEND OF YOU       '
+'''>>> S=S.strip
+{% comment %} >>> S
+<built-in method strip of str object at 0x7f15d46a5330>
+>>> S.endswidth('you')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'builtin_function_or_method' object has no attribute 'endswidth'
+>>> {% endcomment %}
+>>> S = "Joe is the best friend of you       "
+>>> S
+'Joe is the best friend of you       '
+>>> S.endswith('you')
+False
+>>> S=S.strip()
+>>> S
+'Joe is the best friend of you'
+>>> S.endswith('you')
+True
+>>> a = "a b c"
+>>> b = "+"
+>>> b.join(a)
+'a+ +b+ +c'
+
+
+
+					LISTS
+Python lists are:
+
+Ordered collections of arbitary objects i.e. lists are sequences.
+	L = [1,2,3]
+
+Lists can be accessed be offset.
+	L [0]
+
+Unlike strings, lists can grow and shrink in place, and can contain any sort of object.
+	l = [1,'python',1.24]
+
+Lists are mutiable
+L[0]=5
+
+
+					LIST OPERATIONS
+	Operations			Interpitation
+L.append(4)			Growing list
+L.extend([2,3,4])	Growing list
+L.insert(i,x)		Insert x at position i
+L.index(x)			Searching
+L.count(x)			Count number of occurrences of x
+L.sort()			Sorting
+L.reverse()			Reversing
+L.pop(i)			Shrinking
+
