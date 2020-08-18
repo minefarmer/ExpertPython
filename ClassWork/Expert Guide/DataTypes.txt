@@ -1,0 +1,8 @@
+                BUILT-IN DATA TYPES
+
+In Python, data types take form of objects-either built-in objects. or objects created by programmers.
+
+1. Built-in objects make programs easy to write.
+2. Built-in objects are components of extensions.
+3. Built-in objects are more efficient than custom data structers.
+4. Built-in objects are a standard part of the language.

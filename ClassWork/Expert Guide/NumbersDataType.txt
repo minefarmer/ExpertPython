@@ -1,0 +1,31 @@
+                    NUMBERS
+
+Number data types store numeric values. They are immutable data types, which means that changing the value of a number data type results in a newli allocated object.
+
+Python supports differient numerical types:
+    Integers, that have no franctional part:  e.g. 123, 5
+    Floating point numbers, that have a fractional part:  e.g. 3.14, 3.333333, 2.5*10 [squared]
+    Complex numbers, that have imaginary parts:  e.g. 1 + 2j
+
+
+                  NUMBER OPERATIONS
+
+Operations          Interpretations
+x or y              Logical OR (y is evaluated only if x is false)
+x and y             Logical AND (y is evaluated only if x is true)
+not x               Logical negation
+x is y, x is not y  Object identy test
+x<y,x<=y,x>y,x>=y   Magnitude comparison
+x == y, x !+ y      Value equality operators
+x | y               Bitwise OR
+X ^ y               Bitwise XOR
+x & y               Bitwise AND
+x<<y, x>>y          Shift x left or right by y bits
+x + y               Addition
+x - y               Subtraction
+x * y               Multiplication
+y % x               Remainder
+y / x               Division
+-x, +x              Negation, identity
+~x                  Bitwise NOT 
+x ** y              Power
