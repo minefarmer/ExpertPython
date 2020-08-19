@@ -1,0 +1,89 @@
+{% comment %} 
+DYNAMIC TYPING   31
+ASSIGNMENT   41
+TYPES LIVE WITH OBJECTS, NOT VARIABLES   58
+SHARED REFERENCES   75
+
+
+
+
+{% endcomment %}
+
+
+                  VARIABLES AND ASSIGNMENTS
+
+                    Variables 
+Variables are placeholders for values. Variables are used to avoid re-computing of values and to give names that help the reader to to understand code.
+
+Variable names must start with an underscore
+or letter, which can be followed by any number
+of letters, digits, or underscores.                         Examples
+
+Variables are case sensitive i.e. 'name' and            LEGAL       ILLEGAL
+'name' are two differient variables.                    name        1_name
+                                                        true        True
+                                                        _name       @name
+Reserved words cannot be used as variable               Age22       22age
+names. For e.g. 'True' cannot be used as a
+variable name.
+
+
+                DYNAMIC TYPING
+Dynamic typing means that there is no need to declare variables before using them.
+    A variable is created when your code first assigns it a values.
+    A variable never has any type information associated with it.
+        The notion of type lives with objects, not names.
+    When a variable appears in an expression, it is immediatly replaced with the object that it currently refers to.
+    All variables must be assigned before theycan be used; referencing unassigned variables result in errors.
+
+
+                ASSIGNMENT
+Variables are entries in a system table, with       NAMES   REFERENCES   OBJECTS 
+spaces for links to objects. Variables always                   |
+link to objects and never to other objecrts.          a         |           3  
+                                                                |
+Objects are pieces of allocated memory, with                    |
+enough space to represent the values for which      a=3 # reasign a name to an object
+they stand.
+                                                    Python will perform 3 steps to carry out
+Reference is a kind of association, implemented     this request:
+as a pointer in memory.                             1. Create an object to represent the
+                                                       value 3.
+                                                    2. Create the variable a, if it does not 
+                                                       exist.
+                                                    3. Link the variable 'a' to the new
+                                                       object 3.
+
+
+        TYPES LIVE WITH OBJECTS, NOT VARIABLES
+
+a=5     # it is an integer
+a='sue' # it is a string
+a=3.72  # now it is a floating point                    Objects are garbage collected
+
+                                                    Whenever a name is assigned to a new object,
+In the above example, we haven't actually           the space held by the prior object is reclaimed
+changed the type of the variable 'a'; we            if it is not referenced by any other name or
+have simply made the variable reference a           or object. This automatic reclamation of objects'
+different type of object.                           space is known as garbage collection.
+
+Objects, on the other hand know what type
+they are - each object contains a header
+field that tags the object with it's type.
+
+
+        SHARED REFERENCES
+            a = 3               |           a = 3
+            b = a               |           b = a
+                                |           a = 'hello'
+                                |
+names   references  objects     |   names   references  objects 
+            |                   |                 |
+  a --------| ------- 3         |        a -----  |  ----- > 3
+          |-|-------^           |               | |  |
+  b ------| |                   |        b -----|-|--|
+                                |               | |
+                                |               |-|------ 'hello'    
+
+
+
