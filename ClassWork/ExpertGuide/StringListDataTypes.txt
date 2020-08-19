@@ -1,3 +1,14 @@
+{% comment %} 
+Strings   11
+Lists   101
+Dictionaries   173
+Tuples   235
+Sets   269
+
+
+
+ {% endcomment %}
+
                 STRINGS
 
     Strings are used to record textual information.
@@ -113,4 +124,204 @@ L.count(x)			Count number of occurrences of x
 L.sort()			Sorting
 L.reverse()			Reversing
 L.pop(i)			Shrinking
+L.remove        	Remove
+
+
+>>> L = [1,2,3]
+>>> L
+[1, 2, 3]
+>>> L[0]
+1
+>>> L = [1, 'python',1.24]
+>>> L[0] = 5
+>>> L
+[5, 'python', 1.24]
+>>> L = [1, 'python',1.24]
+>>> L[0] = 'h'
+>>> L
+['h', 'python', 1.24]
+>>> L = [1,2,3]
+>>> L.append(4)
+>>> L
+[1, 2, 3, 4]
+>>> L.extend([2,4,8])
+>>> L
+[1, 2, 3, 4, 2, 4, 8]
+>>> L.insert(1,5)
+>>> L
+[1, 5, 2, 3, 4, 2, 4, 8]
+>>> L.index(4)
+4
+>>> L.count(2)
+2
+>>> L.sort()
+>>> L
+[1, 2, 2, 3, 4, 4, 5, 8]
+>>> L.reverse()
+>>> L
+[8, 5, 4, 4, 3, 2, 2, 1]
+>>> L.pop(2)
+4
+>>> L
+[8, 5, 4, 3, 2, 2, 1]
+>>> L.remove(4)
+>>> L
+[8, 5, 3, 2, 2, 1]
+
+
+
+
+						DICTIONARIES
+Python dictionaries are:
+Accessed by keys, not offset position.
+	D['name']
+
+Unordered collections of arbitrary objects.
+	D={'name':'abc','l_name':'xyz','age':22}
+
+Variable length, heterogeneous and arbitrarily nestable.
+	record={'name':{'first':'Bob','lname':'Willaim'},
+		'jobs':['manager','engineer']
+		'age':45}
+Mutable
+	D['name']='Brida'
+
+
+					DICTIONARY OPERATIONS
+	Operations				Interpretations
+d.keys()				All keys
+d.values()				All d.values
+d.clear()				Remove all items
+d.update(d2)			Update the leys
+d.get(key,default)		Fetch by key, if absent default(or None)
+d.pop(key,default)		Remove by key, if absent default(or error)
+
+
+>>> D={'name':'abc','l_name':'xyz','age':22}
+>>> D
+{'name': 'abc', 'l_name': 'xyz', 'age': 22}
+>>> record={'name':{'first': 'bob', 'lname': 'William'}, 'job': ['manager', 'engineer']} 
+>>> record
+{'name': {'first': 'bob', 'lname': 'William'}, 'job': ['manager', 'engineer']}
+>>> D['name']='joe'
+>>> D
+{'name': 'joe', 'l_name': 'xyz', 'age': 22}
+>>> D.keys()
+dict_keys(['name', 'l_name', 'age'])
+>>> D.values()
+dict_values(['joe', 'xyz', 22])
+>>> D.items()
+dict_items([('name', 'joe'), ('l_name', 'xyz'), ('age', 22)])
+>>> D.clear()
+>>> D
+{}
+>>> d1={'name':'joe','age':'22'}
+>>> d2={'name':'john','age':'22'}
+>>> d1.update(d2)
+>>> d1
+{'name': 'john', 'age': '22'}
+>>> D.get('name','default')
+'default'
+>>> d1.get('age','default')
+'22'
+>>> d1.pop('age'
+... ,'default')
+'22'
+>>> d1
+{'name': 'john'}
+
+
+
+
+							TUPLES
+Python tuples:
+Like strings and lists tuples are ordered collections of arbitary objects.
+	T=(1,3,4,4,'hi!')
+
+Accessed by offset
+	T[0]
+	1
+
+Immutable sequences
+	T[0] = 9
+	'tuple' object does not support item assignment
+
+Fixed length, heterogeneous and arbitrarily nestable.
+	T = (5,6,[7,8[12,13]],9,('hi','python'),{'a':'b'})
+
+					TUPLES OPERATIONS
+	Operartions				Interpretations
+len(T)						Length of tuple
+T1 + T2						Concatenation
+T * 3						Repeat
+T.index('hi!)				Search
+T.count(value)				Count
+
+>>> t=(1,3,4,4,'hi!')
+>>> t
+(1, 3, 4, 4, 'hi!')
+>>> t[0]
+1
+
+
+
+
+								SETS 
+
+Sets in python:
+
+Sets are unordered collection of objects.
+	set1=set('abcde')
+
+Sets contain unique and immutable objects.
+		set1 =set1.add([1,2])
+		TypeError: unhashable type: 'list'
+
+Sets are unordered and do not map key to values, therefore they are neither sequence nor mapping types.
+	set[10]
+	'set' object does not support sequence operations.
+
+
+						SET OPERATIONS
+	Operations		Interpretation
+a in set1			Membership
+Set1 > set2			Superset
+Set1 < set2			Subset
+Set1 | set2			Set union
+Set1 ^ Set2			Set symetric difference
+Set1 & Set2			Set intersection
+Set1 - set2			Set difference
+
+
+
+>>> set1 =set('abcde')
+>>> set1 =set1.add([1,2])
+Traceback (most recent call last):
+  File "<input>", line 1, in <module>
+    set1 =set1.add([1,2])
+TypeError: unhashable type: 'list'
+>>> set1.add('f')
+>>> set1
+{'e', 'b', 'a', 'f', 'c', 'd'}
+>>> set1[0]
+Traceback (most recent call last):
+  File "<input>", line 1, in <module>
+    set1[0]
+TypeError: 'set' object is not subscriptable
+>>> 'a' in set1
+True
+>>> set2=set('ab')
+>>> set1>set2
+True
+>>> set1<set2
+False
+>>> set1|set2
+{'e', 'd', 'b', 'f', 'a', 'c'}
+>>> set1^set2
+{'e', 'd', 'c', 'f'}
+>>> set1&set2
+{'b', 'a'}
+>>> set1-set2
+{'e', 'f', 'd', 'c'}
+>>> 
 
