@@ -55,3 +55,18 @@ record={'name':{'first':'Bob','lname':'Smith'},
         'jobs':['manager','engineer'],
         'age':34}
 print(record)  # {'name': {'first': 'Bob', 'lname': 'Smith'}, 'jobs': ['manager', 'engineer'], 'age': 34}
+print(record['name']['first'])  # Bob
+print(record['jobs'][0])  # manager
+
+print(('-'*25))  # -------------------------
+# ovrwrite the previous value if key is the same
+x={' ':'1'," " :'2', 'cut':'apple','cut':'bananna'}
+print(x)  # {' ': '2', 'cut': 'bananna'}
+
+print(('-'*25))  # -------------------------
+# methods of dictionary
+print(D.keys())  # dict_keys(['name', 'l_name', 'age'])
+print(D.values())  # dict_values(['abc', 'xyz', 22])
+print(D.items())  # dict_items([('name', 'abc'), ('l_name', 'xyz'), ('age', 22)])
+print(D.get('name')) # abc
+
