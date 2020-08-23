@@ -1,0 +1,28 @@
+{% comment %} FILES
+Files are named storage compartments on our computer that are managed by the operating system.
+Python provides basic functions and methods necessary to manipulate files by default
+
+    OPERATIONS                          INTERPRETATION
+f = open(name[, mode])              Create a file object
+Text = input.read()                 Read entire file into a single string
+Text = input.read(N)                Read up to the next N characters into a string
+Text = input.readlune()             Read nest line into a string
+output.write(text)                  Write a string of characters into a file
+output.close()                      Manual close
+anyfile.seek(N)                     Change file position to offset N for next operation
+
+
+    MODES               DESCRIPTION
+r               Open a file for reading only. The file pointer is placed at the beginning of the file.
+rb              Open a file for reading only in binary format. The file pointer is placed at the beginning of the file'
+r+              Opens a file for both reading and writing, The file pointer will be at the beginning of the file.
+rb+             Opens a file for both reading and writing in binary format, The file pointer will be at the beginning of the file.       
+w               Opens a file for writing only. Overwrites the file if the file exists. Creates a new file if the file doesn't exist.
+wb              Opens a file for writing only in binary format. Overwrites the file if the file exists. Creates a new file if the file doesn't exist.file.
+w+              Opens a file for both writing and reading. Overwrites the file if the file exists. Creates a new file if the file doesn't exist.
+wb+             Opens a file for both writing and reading in binary format. Overwrites the file if the file exists. Creates a new file if the file doesn't exist.file.
+a               Opens a file for appending. The file pointer is at the end of the file if it exists. If a file does not exist, it creates a new file for both reading and writing.
+ab              Opens a file for appending in binary format. The file pointer is at the end of the file if it exists. If a file does not exist, it creates a new file for both reading and writing.
+a+              Opens a file for both appending and reading. The file pointer is at the end of the file if it exists. If a file does not exist, it creates a new file for both reading and writing.
+ab+             Opens a file for appending and reading in binary format. The file pointer is at the end of the file if it exists. If a file does not exist, it creates a new file for both reading and writing.
+ {% endcomment %}
