@@ -1,0 +1,29 @@
+        WHILE LOOP
+
+It repeatpy executes a block of (normally indented code) statements as long as a test at the top keeks evaluating to true value.
+
+Control keeps looping back to the start of the statement until the test becimes false.
+
+                                Pass: the Pass
+General loop format             statement is a no-          Continue: the
+while test: # loop test         operation paceholder        continue statement
+    statements # Loop body      that is used when the       causes an immediate
+else: # Optional else           syntax requires a           jump to the top of a
+    statements                  statement                   loop
+
+                                                            Break:
+                                                            The break statement
+                                Loop else                   causes an immediate
+                                                            exit from the loop
+
+
+
+
+        FOR LOOP
+It can step through the items in any ordered Sequence or other iterable object. The for statement works on strings, lists, tuples, and other built-in iterables, as well as new user-defined objects.
+
+                General format
+                for target in object:   # Assign object items to target
+        ---->           statements    # Repeated loop body: use target
+Indent blocks   else:                   # Optional else part
+        ---->           statements    # If I didn't hit a 'Break'

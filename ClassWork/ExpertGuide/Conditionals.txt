@@ -1,0 +1,30 @@
+INTRODUCTION TO CONDITIONALS
+
+Conditionals are expressions that evaluate to either true or false.
+
+    Why we need contitionals.
+    In a program sometimes flow needs to take decisions based on checks and contitions i.e. we want our program to perform a set of actions in case A, but perform another set of actions in case B.
+
+Conditions offered in Python
+    Simple Condition
+    Simple if Condition
+    If-else Condition
+
+        Conditions Elaborated
+Simple condition: These conditions result in either True or False.
+>>> 3>5
+False
+>>> x=10
+>>> x<11
+True
+
+if Condition: If statement selcts actions to perform
+>>> if test:
+...     statements
+
+if-else condition
+>>> if test:
+...     statement1
+... else:
+...     statement2
+

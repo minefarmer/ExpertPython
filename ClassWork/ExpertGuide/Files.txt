@@ -1,4 +1,5 @@
-{% comment %} FILES
+         FILES
+
 Files are named storage compartments on our computer that are managed by the operating system.
 Python provides basic functions and methods necessary to manipulate files by default
 
@@ -25,4 +26,4 @@ a               Opens a file for appending. The file pointer is at the end of th
 ab              Opens a file for appending in binary format. The file pointer is at the end of the file if it exists. If a file does not exist, it creates a new file for both reading and writing.
 a+              Opens a file for both appending and reading. The file pointer is at the end of the file if it exists. If a file does not exist, it creates a new file for both reading and writing.
 ab+             Opens a file for appending and reading in binary format. The file pointer is at the end of the file if it exists. If a file does not exist, it creates a new file for both reading and writing.
- {% endcomment %}
+ 

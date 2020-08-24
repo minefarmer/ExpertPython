@@ -1,0 +1,45 @@
+    WHAT PYTHON REMOVES         WHAT PYTHON ADDS 
+Parenthesis are optional.       Colon character(:)
+        If(x<y)                     if x>y
+        or                             x=2
+        If x<y                         y=1
+End-of-line is end of statement.     Indention
+        x = 1;                      if x>y
+        or                             x=2
+        x = 1                          y=1
+End of indention block.
+        If (x>y)
+        {
+           x=1;
+        y=2;
+        }
+
+
+
+
+    WHY INDENTION SYNTAX?                         
+C like language                 Python
+If(x)                           If x:
+    If(y)                           If y:
+        Statement1:                     Statement1
+    else                            else:
+        Statement2;                     Statement2
+
+Python is a WYSIWYG language.
+
+
+
+
+    MULTIWAT BRANCHING
+When more than two conditions are to be checked then addition of elif block is necessary.
+
+
+                            >>> x='eggs'
+If test1:                   >>> if x == 'spam':
+staments1                   ...     print('shave and a haircut')
+elif test2                  ... elif x == 'bugs':
+statements2                 ...     print("what.s up doc?")
+else:                       ... else:
+staments3                   ...     print('Run away! Run away')
+                            Run away! Run away
+
