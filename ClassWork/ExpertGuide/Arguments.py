@@ -39,3 +39,17 @@ afunc(a=1,b=2,c=3)  # 1 {'b': 2, 'c': 3}
 afunc(1,b=2,c=3,d=4)  # 1 {'b': 2, 'c': 3, 'd': 4}
 
 print('*'*40)  # ****************************************
+
+
+# Unpacking arguments
+def afunc(a,b,c,d):
+    print(a,b,c,d)
+args = (1,2,3,4)
+print(args) # (1, 2, 3, 4)
+
+
+afunc(*args)  # 1 2 3 4
+args = [5,6,7,8]
+afunc(*args)  # 5 6 7 8
+args = {'a':1, 'b':2,'c':3,'d':4}
+afunc(**args)  # 1 2 3 4
