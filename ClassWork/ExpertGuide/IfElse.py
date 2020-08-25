@@ -30,18 +30,5 @@
                          
 
 
-# Third video
-while True:
-    a=int(input("Enter first no"))
-    b= int(input("Enter second no"))
-    c= int(input("Enter third no"))
-    if a>b and a>c:
-        print("a is greatest ",a)
-    elif b>a and b > c:
-        print('b is greatest', b)
-    else:
-        print('c is greatest',c)
-    reply=input('enter stop to exit')
-    if reply =='stop': break
-        
+
         

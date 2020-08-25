@@ -1,0 +1,13 @@
+                LAMBDA  
+
+Functions may also be created with a lambda expression, a feature that allows you to in-line a function defination. Like def, this expression creates a function to be called later, but it returns the function instead of assigning it a name.
+
+            Lambda argument1, argument2. ....arugmentN: expression using arguments
+
+    Lambda basics
+Lambda is an expression, not a statement.
+Lambda's body is a single expression, not a block of statements.
+
+    Use of lambda
+Code jump tables
+Provide code proximity

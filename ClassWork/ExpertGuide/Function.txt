@@ -1,0 +1,102 @@
+            FUNCTIONS
+            Factory Functions: Closures and Recursion  64
+            ARGUMENT MATCHING   91
+
+
+        
+
+            Lambda
+
+Function is a device that groups a set of statements so they can be run more than once in a program.
+    Function is a basic program structure to maximize code reuse.
+    Functions split complex system into manageable parts.
+
+Structure of function:
+    def func_name(arg1,arg2,arg3,....,argN): # create and assign a function
+        statements  # body executed when function called.
+
+        Function bodies often contain a return statement:
+            def func_name(arg1,arg2,arg3,....,argN):
+                statements
+                return value  # sends a result back to caller
+
+
+
+            FUNCTION TERMINOLOGY
+
+F   def         The def statement creates a function object and assings it to a name.
+U   
+N   name        Function name is just followed by def statement.
+C 
+T   arguments   Arguments are the objects sent to functions as input.
+I 
+O   return      Functions that compute a value  and send it back to the caller with a return statement.
+N
+    call        Functions can be called anywhere after running def body. Calls are made by adding parenthesis after function name.
+
+
+
+            SCOPE OF A VARIABLE 
+
+NAMESPACE: A place where names live. The location of a name's assignment in our source code determines the scope of the name's visibility to our code.
+
+Rule of Scope of Variable:
+    Names assigned inside a def can only be seen by the code within that def.
+    Names assigned inside a def do not clash with variables outside the def, even if wven if the same names are used elsewhere.
+
+Three Differient kind of scopes
+    Local: If a variable is assigned inside a def, it is called a local variable.
+    Nonlocal: If a variable is assigned in an enclosing def, it is nonlocal to nested functions.
+    Global: If a variable is assigned outside all defs, it is global to entire file.
+
+
+
+            ADVANTAGES OF FUNCTIONS
+
+Putting code in a function makes it a tool that you can as many times as I like.
+Because callers can pass in arbitary arguments, functions are general enough to work on any equences or iterables.
+Functions can be imported and reused by any program run on my machine.
+
+
+
+
+
+
+            FACTORY FUNCTIONS: CLOSURES AND RECURSION
+
+Functions are objects in python like everything else, and can be passed back as return values from other functions. These returned objects remember values in inclosing scope regardless of whether those scopes are still present in memory. This kind of behavior is called closure or a factory functions.
+
+
+            RECURSVIE FUNCTIONS
+
+fact(5)     def fact(N):                                120
+  |             if N == 1:                               ^
+  v                 return 1                             |
+5*fact(4)       else:                                   5*24
+  |                 return N*fact(N-1)                   ^
+  v                                                      |
+4*fact(3)                                               4*6(=24)
+  |                                                      ^
+  v         Recursive functions are those                |
+3*fact(2)   that call themselves either                 3*2(=6)
+  |         directly or indirectly in order to           ^
+  v         loop.                                        |
+28fact(1)                                               2*1(=2)
+  |
+  v 
+ 2*1                                            (It terminates here)
+
+
+
+            ARGUMENT MATCHING
+
+                        Arguments
+    ________________________|_____________________________                   
+    |               |               |               |                   |
+Positional      Keywords        Defaults    Varargs collecting      Varargs unpacking
+
+Positional arguments: matched from left to right.
+Keyword arguments: matched by argument name
+Default argument: specify values for optional arguments that aren't passed
+Varargs collecting: collect arbitrarily many positional or keyword arguments.
+Varargs unpacking: pass arbitrarily many positional or keyword arguments.

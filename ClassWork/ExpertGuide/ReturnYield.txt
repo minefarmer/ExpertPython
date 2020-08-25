@@ -1,0 +1,12 @@
+            RETURN AND YIELD    
+
+Multiple Results: return statement can return multiple values by packaging them in a tuple or other collection type.
+
+        Return                                      Yield
+
+When a function is called, them             Yield statement suspends the
+Caller stops until the function             function and sends a value back
+finishes it's work and returns              to the caller, but retains enough
+control to the caller. Return               state to enable the function to
+statement sends back a single               resune where it left off.
+result immediately.

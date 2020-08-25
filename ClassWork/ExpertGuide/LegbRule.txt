@@ -1,0 +1,12 @@
+            NAME SPACE: LEGB RULE
+
+Built-in(python)
+        Names preassigned in the built-in names module:ope,range,SyntaxError
+
+    Global (module)
+        Names assigned at the top level of a module file, or declaired global in a def within the file.
+            Enclosing function locals:
+            Names in the local scope of any and all enclosing functions (def or lambda), from inner to outer.
+
+                    Local (function)
+                    Names assigned in any way within a function (def or lambda), and not declared global in that function.
