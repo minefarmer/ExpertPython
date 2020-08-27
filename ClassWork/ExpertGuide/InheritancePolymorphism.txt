@@ -1,0 +1,118 @@
+        INHERITANCE AND POLYMORPHISM
+                Inheritance 
+
+Deriving a new      The child class inherits the attributes of it's
+class(sub class     parent class 
+or child class)
+from preexisting    A child class can override data members
+class(super class   and methods from the parent class.
+or parent class)
+    is called       In addition, the child class can add attributes
+inheritance.        and methods that are unique to the child.
+
+
+                Syntax
+
+    Inheritance                                 Multiple
+                                              inheritance
+class DerivedClassName(BaseClassName)       Class DerivedClassName(Base1,Base2,Base3):
+    <statement1>                                <statement1>
+    .                                           . 
+    .                                           . 
+    <statement-n>                               <statement-n>
+
+                                    C2          C3
+                                    X  __   __  W 
+                                    z    |  |   z
+In Python, instances inherit             |  |       l1.x and l2.x find x in C1
+from classes, and classes inherit         C1        l1.y and l2.y find y in C!
+from super classes.                        x        l1.z and l2.z find x in C2
+                                           y        l2.name finds name in l2 
+                                         |  |
+                                         |  |
+                                    l1   |  |   l2
+                                   name _|  |  _name
+
+
+                                   Example
+            Inheritance 
+                                                first
+                                              -setdata
+                                   __________>-getdata
+                            second                ^  
+                       ____>-getdata              |  
+            Z(instance)              ^ . 
+                -data                   .         |
+                      <------|z.data  z.getdata   z.setdata
+
+
+                                    Example
+class first():                  class second(first):
+    def setdata(self,value):        def getdata(self):
+        self.data = value               print('current values:',self.data)
+    def getdata(self):
+        (print(self.data)
+                                z = second()
+                                z.setdata(56)
+x = first()                     z.getdata()
+y = first()                     current value: 56
+x.setdata('hello')
+x.getdata(21)                   x.getdata() # x is still first class instance(old message)
+x.getdata()                     hi!
+hello
+y.getdata()
+21
+x.data = 'hi!'
+x.getdata()
+hi!
+
+
+
+            MODULES
+
+Each python program file is a module, and modules import other modules to use the names they define.
+
+Modules are processed with two statements:
+Import: Lets a client fetch a module as a whole.
+From: Allows clients to fetch particular names from a module.
+
+    Code reuse: Modules let you save code in files permanently. It can be reloaded and rerun
+w   as many times as needed.
+H
+Y   System namespace partiting: Modules are self contained packages -you can never see a
+M   name in another file, unless I explicity import that file.
+O   
+D   Implimenting shared services or data: modules are useful for implimenting compoments
+U   that are shared across a system and hence require nly a single copy.
+L
+E
+S
+
+
+
+            HOW IMPORT WORKS
+
+Find the Modules file.  Find
+
+                        compile     Compile it to byte code
+
+Run the module's code     Run
+to build the object it
+defines.
+
+
+
+
+                    POLYMORPHISM
+
+Polymorphism is everywher in            Polymorphism in classes:
+python; because python is a
+    dynamic language.               In a child class we can change
+                                    how some methods work whilst
+In Python, many operators have      keeping the same name.
+the property of polymorphism.       We call this polymorphism or
+Like the following example:                 overriding
+        1+2                         and it is useful because we do not
+        3                           want to keep introducing new
+      'sum' +'set'                  method names for functionality
+      'sunset'                      that is pretty similar in each class.

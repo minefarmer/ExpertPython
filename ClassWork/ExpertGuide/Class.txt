@@ -1,0 +1,79 @@
+            CLASS IN PYTHON
+            What is CLASS
+
+S                           E                           X                             
+S   A user defined          C   An individual           A
+A   prototype for an        N   object of a certain     T   class class_name
+L   object that defines     A   class. Each             N 
+C   a set of attributes     T   instance of a class     Y       statement1
+    that characterize       S   has access to the       S       statement2
+    any object of the       I   class's attributes.             statement3
+    class. The                                                  statement4
+    attributes are data         In python, class                etc.
+    members and                 and instance are    
+    methods.                    two distinct object
+                                types.
+
+
+Class: Student
+Attributes: Name and Rollno
+Methods: setName() and setRollno()
+
+James           John            Sam         Maria  = name
+110             114             142         122    = rollno 
+
+
+
+
+            Why classes are useful.
+
+Multiple instances          Customization via           Operator
+                            Inheritance                 overloading
+
+Classes are essentially     We can extend a class       Operator overloading
+factories for generating    by redefining it's          allows same operator to
+one or more objects.        attributes outside the      have differient meaning
+Everytime we call a         class in new                according to the 
+class, we generate a        components coded as         context.
+new object.                 subclasses.
+
+
+
+
+            Class attributes
+
+                                                                Class Variable
+                                                        A variable that is shared by all instances
+        Data member                                     of a class.
+A class variable or instance variable that holds
+ associated with a class and it's objects.                      Instance variable
+
+                                                        Defined inside a method and belongs
+                                                        only to the current instance of a class.
+
+        Method 
+A special kind of function that is defined in a         class class_name
+class defination.                                           data=42             # class method  
+                                                            def getdata(self):  # method
+                                                                data = 40       # instance
+                                                        # 'self' references the instance object being processed.
+
+
+
+
+                            EXAMPLES
+
+            |   class First:                                    |   x.setdata('Hello')
+            |       def setdata(self,                           |   y.setdata(21)
+Define a    |       value):                         Calling     |   x.getdata()
+    class   |           self.data = value           methods     |   hello
+            |       def getdata(self):                          |   y.getdata()
+            |           print self.data                         |   21
+
+
+Creating    |   x = First()                         |   x.data = 'hi!'     
+instances of|   y = First()             Setting     |   x.getdata()
+class       |                           attribute   |   hi!
+            |                           outside     |   x.anothername = 'it is possible'
+                                        class       |   x.anothername
+                                                    |   'it is possible'

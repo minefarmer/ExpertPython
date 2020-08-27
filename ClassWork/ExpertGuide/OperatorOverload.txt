@@ -1,0 +1,50 @@
+                    OPERATOR OVERLOADING
+
+Operator overloading allows same operator to have differient meaning according to the context.
+
+                Example of overloading '+' operator
+                    1+2     # sum
+                3
+                    'sun' +'set'    # concatenation
+                'sunset'
+
+We can also overload the built-in operators to make them work as we want. Python provides
+special methods for that. Example: addition, slicing, printing, and so on.   
+
+
+
+        Main Ideas of operator overloading
+
+Methods named with double underscors (__X__) are special hooks.
+Such methods are called automatically when instances appear in built in operations.
+Classes may override most built in type operations.
+There are no defaults for operator overloading methods, and none are required.
+Operatore allow classes to integrate with python's object model.
+
+
+
+
+        OPERATOR OVERLOADING METHODS
+
+Method              Implements              Called for
+__init__            Constructor             Object creation:X=class_name(args)
+__add__             Operator +              X+Y,X+=Y
+__or__              Operator | (bitwise or) X|Y,X|=Y 
+__repr__,__str__    printing                Print(X),repr(X),str(X)
+__getattr__         Attribute fetch         X.any
+__setattr__         Attribute assignment    X.any = value
+__delattr__         Attribute delition      de X.any
+__len_              length                  len(X)
+__lt__,__get__      Comparisons             X<Y,X>Y
+__bool__            Boolean tests           boll(X)
+__contains__        Membership tests        Item in X(any iterable)
+
+
+
+
+        SCOPE IN Python
+
+# file scope.py
+X= 11       # Global name               print X         #11.module
+def():                                  f()             #11:global
+    print X                      g()             #22:local
