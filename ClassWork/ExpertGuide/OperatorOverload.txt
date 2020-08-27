@@ -45,6 +45,14 @@ __contains__        Membership tests        Item in X(any iterable)
         SCOPE IN Python
 
 # file scope.py
-X= 11       # Global name               print X         #11.module
-def():                                  f()             #11:global
-    print X                      g()             #22:local
+X= 11       # Global name               	print X         #11.module
+def f():                                	f()             #11:global
+    print X  # Access local             	g()             #22:local
+def g():									print X			# 11:module
+	x = 22	# local variable 				obj = C()		#make instance
+	print X									print obj.X		# 33:class name inherited by instance
+class C:									obj.m()			# Attach attribute name X to instance
+	X = 33	# class attribute				print obj.X		# 55 : instance
+	def m(self)								print C.X 		# 33:class 
+		x = 44	# local variable in method	# print(C.m.X)  # FAILS:only visiable in method
+		self.X = 55 # instance attribute	# print(g.X)	# FAILS:only visible in function
