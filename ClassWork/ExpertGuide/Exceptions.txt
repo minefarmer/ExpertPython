@@ -1,0 +1,81 @@
+                EXCEPTIONS
+Exceptions are the events that can modify the flow of control through a program. Exceptions are triggered automatically on errors, and they can be triggered and intercepted by my code.
+
+{% comment %}  (left column) Statements to process exceptions {% endcomment %}
+
+try/except: Catch and recover from exceptions raised by python, or by me.
+try/finally: Perform clean up actions, whether exceptions occur or not.
+raise: Trigger an exception manually in my code.
+assert: Conditionally trigger an exception in my code.
+with/as: implement context manager.
+
+
+
+
+            EXCEPTION ROLES
+
+Error handling
+Python raises exceptions whenever it detcts errors in programs at run time. You can eiTher catch and respont to the errors or ignore them explicity.
+
+Event notification
+Exceptions can also be used to signal valid onditions without me having to pass result flags around a program or test them explicity.
+
+Special case handling
+I can often eliminate special-case code by handling unusual case in exception handlers.
+
+Termination actions
+The try/finally statement allows you to guarantee thayt required closing-time operations will be performed, regardless of the presences or abscence of exceptions.
+
+Unusual Control flow
+There are no 'go to' statement in python but I can implement it in python by using exceptions.
+e.g. a raise statement can be used to jump out of multiple loops.
+
+
+
+
+            BUILT-IN EXCEPTIONS
+
+BaseException --------- SystemExit
+                |------ KeyboardInterrupt
+                |------ GeneratorExit
+                |------ Exception  --|---- ArithmeticError --|---- Floating point error
+                                     |---- AssertionError    |---- OverflowError
+                                     |---- MemoryError
+                                     |---- TypeError
+                                     |---- SyntaxError ----------- IndentionError
+                                     |---- LookupError ------|---- IndexError
+                                     |---- ImportError       |---- KeyError
+
+
+
+
+            TRY/EXCEPT AND
+            TRY/FINALLY STATEMENTS 
+
+Default handlers.
+If me code does not exceplicitly catch the exception, it filters back to the top of the program and invoke the default exception handler, which simply prints the standard error messages and terminates the program immediately.
+
+try
+If I don't want the default behavior, wrap the call in a try statement to catch exceptions myself.
+
+Except
+Recover from exceptions raised in try block.
+
+
+
+            Try/except Statements
+
+Catching any and all exceptions.
+    except clauses that list no exception name(except:) catch all exceptions.
+        except clauses that list a set of exceptions in parentheses(except(e1,e2,e3):) catch any of the listed exceptions.
+
+try:                                            Issue with empty except:
+    action()
+except IndexError:  # Handle index error        Although empty except is convient, it
+    .....                                       may catch unexpected exceptions
+except KeyError:    # Handle key error          unrelated to code.
+    .....
+except:             #  Handle all other         except Exception:  # catch all exceptions,
+    .....              exceptions                                    except exits
+
+
