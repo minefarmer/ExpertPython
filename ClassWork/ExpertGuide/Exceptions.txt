@@ -52,7 +52,7 @@ BaseException --------- SystemExit
             TRY/EXCEPT AND
             TRY/FINALLY STATEMENTS 
 
-Default handlers.
+Default handler.
 If me code does not exceplicitly catch the exception, it filters back to the top of the program and invoke the default exception handler, which simply prints the standard error messages and terminates the program immediately.
 
 try
@@ -79,3 +79,75 @@ except:             #  Handle all other         except Exception:  # catch all e
     .....              exceptions                                    except exits
 
 
+
+            Try/finally Statement
+finally
+If a finally clause is included in a try, python will always run it's block of statements "on the way out" pf the try statement, whether an exception occured while the try block was running or not.
+        try:
+            statements  # run this action first
+        finally:
+            statements  # Always run this code on the way out
+
+If an exception does not occur while try block is running, Python continues on to run the finally block, and then continues execution past the try statement.
+
+If an exception does occur during try block's run, Python still comes back and runs the finally block, but it then propagates the exception up to a previously entered try or the default handler; program does not resume execution below the finally clause's try statement.
+
+
+
+            Raise Statement
+
+raise
+To trigger the exceptions explicitiy, simple run the raise statement.
+
+        raise instance  # Raise an instance of class
+        raise class     # Make and raise instance of class
+        raise           # Reraise the most recent exception
+
+        e.g.
+        raise IndexError
+        raise IndexError()
+
+User triggered exceptions are caught the same way as those Python raises.
+
+
+
+            Assert Statement
+
+assert
+assert can be thought of as a conditional raise statement. Assertions are typically used to verify program conditions during developement.
+
+                    assert test, data  # The data part is optional
+
+If the test evaluates to false, Python raises an exception: the data item is used as the exception's constructor argument. Like all acceptions, the AssertionError exception kills my program if it is not caught with a try, in which case the data item shows up as a part of standard error message.
+
+
+
+            with/as Context Managers
+
+with/as
+The with/as statement is designed to work with context manager objects. It is designed to be an alternative to a common try/finally usage idiom.
+
+Context manager is an object that impliments two methods:
+__enter__
+__exit__
+These are called immediately before and after 'with' block.
+
+                    With expression [as variable]:
+                        with-block
+
+
+
+
+            with/as
+
+How the with statement works:
+
+The expression is evaluated, resulting in an object known as context manager that must have __enter__ and __exit__ methods.
+
+The context manager's __enter__ method is called. The value it returns is assigned to the variable in the clause if present. or simply discarded otherwise.
+
+The code in the nested with block is executed.
+
+If the with block raises an exception, the __exit__(type,value.traceback) method is called with the expression details. If this value returns a false value, the exception is reraised.
+
+If the with block does not raise an exception, the __exit__ method is still called, but it's type, value, traceback arguments are all passed as None.
