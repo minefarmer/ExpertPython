@@ -1,0 +1,54 @@
+                    TRY/EXCEPT/ELSE
+else  The else clause provides a handler to be run if no exceptions occur.
+
+try:
+    statements          # run this main action first
+except name1:
+    statements          # run if name1 is raised during try block
+except (name2, name3):
+    statements          # run if any of these exceptions occur.
+except name4 as var:
+    statements          # run if name4 is raised, assign instance raised to var
+except:
+    statements          # run for all other exceptions raised
+else:
+    statements          # run if no exception was raised during try block
+
+
+    User    Programs may name their own exceptions by creating a new exception class, whish inherit from a built-in exception class: usually the class named Exception 
+  defined
+exception
+
+                class MyException(Exception):pass   # User-defined exception
+                def raiseMyException():
+                    raise MyException()             # Raise instance
+                try:
+                    raiseMyException()
+                except MyException:                 # Catch class name
+                    print('Got exception')
+                print('out of try')
+
+
+
+
+            NESTING
+
+try:        v---->  def func1():       v---->def func2():       Nested try/except statements: when an exception
+    func1()----^        try:                    ....            is raised, control jumps back to the most recently
+except E:                   func2()----^   _____raise E         entered try statement with a matching except
+                        except E:         |     ....            clause, and the program resumes after that try
+                        v.... <___________|                     statement. Except clauses interact and stop the
+                        |                                       execution.
+                        v
+
+
+Nested try/finally statements: when an exception   <\           try:         ---def func1():     v--def func2():
+is raised here, controle returns to the most recently\              func1()--^      try:         |      ....
+entered try to run its finally statement, but then    \         finally;                func2----^      raise E
+the exception keeps propagating to all finallys in      <___                        finally:        v__ ....
+all active try statements and eventually reaches            |__________________________ ....   < ___|
+default top-level handler, where an error message
+is printed. finaly cluase intercept but do not stop an execution.
+
+
+

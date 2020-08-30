@@ -1,0 +1,156 @@
+                WHAT IS TKINTER
+
+Tkinter is an open source, portable GUI toolkit designed for use in Python scripts
+Actually, Tkinter is simply the name of python's interface to Tk-a GUI library originally written with Tcl programming language.
+The CUI calls are internally routed from python script, to Tkinter and back to python script.
+
+
+
+                ADVANTAGES OF TKINTER
+
+Accessibility:  Tkinter is reguarded as a lightweight toolkit and one of
+                the simplest solutions for python available today.
+
+Portability     A python script that builds GUI with Tkinter will run
+                without source code changes on all major platforms.
+                The same script will provide the native look and feel to
+                it's users on each platforms.
+
+Availability    Tkinter is a standard module in the python library,
+                shipped with the interpreter, Therefor, if I have
+                python, I have Tkinter.
+
+
+
+                WIDGETS IN TKINTER
+                    Tkinter widget classes
+
+Widget class        Description
+Label           The Label widget is used to provide a single-line caption for other widgets.
+
+Button          A simple labeled push-button widgets.
+
+Frame           A countainer for attaching and arranging other widgets objects.
+
+Toplevel, Tk    The Toplevel widget is used to provide a seperate window countainer.
+
+Message         Used to display multiline text fields for accepting values from a user.
+
+Entry           A simple single line text entry field.
+
+Checkbutton     A two-state button widget, typically used for multi-choice selection.
+
+Radiobutton     A two-state button-widget, typically used for single selections.
+
+Scale           A slider widget with scalable positions.
+
+PhotoImage      An image object used for displaying full-color images on other widgets.
+
+Scrollbar       Acontrol for scrolling other widgets.
+
+Menu            A set of options associated with a Menubutton or top-level window.
+
+Listbox         A list of selection names.
+
+text            The text widget is used to displat text in multiple lines.
+
+Canvas          A graphic drawing area, which supports lines, circle, photos, text and so on.
+
+
+
+
+                WIDGET OPTIONS 
+
+            Options are attributes of the widgets.
+
+                            Dimensions
+                              Color
+                              Fonts
+                             Anchors
+                           Relief styles
+                             Bitmaps
+                             Cursors
+
+
+
+
+            TKINTER VARIABLES
+
+Variables can be used with most entry widgets to track changes to the entered value.
+The Checkbutton and Radiobutton widgets require Varibbles to work properly.
+Variables can also be used to validate the contents of an entry widget, and to change the text in lable widgets.
+Tkinter provides the Variable (abstract) class.
+The Variable class provides the possibility of associating a callback method with a  Variable.
+Thus, one could respond to a change in the value of such variables.
+
+
+
+                            VARIABLES
+                                |
+    ____________________________|___________________________
+    |               |                   |                   |
+StringVar        IntVar            BooleanVar           DoubleVar
+
+
+
+
+            GEOMETRY MANAGEMENT IN TKUNDER
+
+GEOMETRY MANAGEMENT CONSISTS OF WIDGET PLACEMENT AND SIZING OF THE SCREEN.
+
+        Tkinter privides 3 geometry managers.
+
+Pack: Quickest and most common way to design interfaces.
+    Positioning is done relative to the container widgets (top, bottom, left, right)
+
+Grid: Used for more complex layouts.
+    Allows the container to be ivided in rows and columns:
+
+Place: Most powerful manager.
+    Allows placement of widgets using either exact coordinates, or as a percentage relative to the size of the master window.
+
+
+
+
+            EVENT HANDELING
+
+Anything that happens in a user interface is an event- for example, clicks on a button or types on a keyboard.
+
+Some events cauld also be triggered by occurences which are not controlled by the user - for example, a background task might complete, or a network connection might be established or lost. 
+
+Our application needs to monitor, or listen for, all events that we find ihteresting, and respond to them in some way if they occur.
+
+To do this, we usually associate certain functions with particular events. We call a function which performs an action in responce to an event an event handler-we binb handlers to events.
+
+
+
+
+            EVENT TYPES IN TKINTER
+
+KeyPress, KeyRelease, Escape,   Keyboard events
+Up, Backspace, Tab, Up, Down
+
+                                  Mouse events      ButtonPress, ButtonRelease, Motion,
+                                                    Enter, Leave, MouseWheel
+
+Map, Unmap, Focusin, FocusOut,   Window events
+        Visibility, Destroy
+
+
+
+            A SIMPLE PROGRAM 
+
+Creating a GUI application using
+Tkinder is an easy task. All you need to
+do is perform the following steps.                      from Tkinder import*
+                                                        root = Tk()
+Import the Tkinter module                               root.title("A simple application")
+                                                        root.mainloop()
+Create the GUI application main window.
+
+Add one or more  of the widgets to the GUI
+application.
+
+Enter the main event loop to take action
+against each event triggered by the user.
+
