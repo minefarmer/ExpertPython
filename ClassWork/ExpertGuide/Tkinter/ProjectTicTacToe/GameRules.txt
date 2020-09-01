@@ -1,0 +1,26 @@
+                GAME RULES
+
+Tic-Tac-Toe
+Tic-tac-toe is a paper-and-pencile game for two players, X and O, wyo take turns marking the spaces in a 3x3 grid. The player who succeeds in placing three respective marks in a horizontal, vertical, or diagonal rid row wins the game.
+
+It' a two player game.
+    Human
+    Compiter
+The objective is to write a computer program in such a way that the computer wins most of the time.
+
+
+
+                TIC-TAC-TOE PSEUDO CODE
+
+Let's the player type which letter they want o be('X' or 'O').
+Determine Who goes First.
+Create an empty Tic-tac-toe board
+Display The board
+While nobody's won and it's not a tie. 
+    If it,s The humans turn
+        Get the humans move
+        Update the board with the move
+    Display the board
+    Switch turns
+Congratulate the winner or declare a tie. 
+
