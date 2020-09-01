@@ -11,7 +11,7 @@ def drawBoard(board):
     print('-------------------')
     print(' ' + board[7] + ' | ' + board[8] + ' | ' + board[9])
     print('-------------------')
-def imputPlayerLetter():
+def inputPlayerLetter():
     # Lets the player type which letter they want to be.
     # Returns a list with the player's letter as the first item, and the computers letter as the second.
     letter = ''
@@ -25,7 +25,7 @@ def imputPlayerLetter():
         return ['O', 'X']
 def whoGoesFirst():
     # Ramdonly chooses the player who goes first.
-    if random.radint(0, 1) == 0:
+    if random.randint(0, 1) == 0:
         return 'computer'
     else:
         return 'player'
@@ -62,7 +62,7 @@ def getPlayerMove(board):
         print('What is your next move? (1-9 ')
         move - int(input())
     return int(move)
-def getPlayerMoveFromList(board, movesList):
+def chooseRandomMoveFromList(board, movesList):
     # Returns a valid move from the passed list on the passed board.
     # Returns None if there is no valid move.
     possibleMoves = []
@@ -150,6 +150,5 @@ while True:
                 break
             else:
                 turn = 'player'
-if not playAgain():
-    break
-
+    if not playAgain():
+        break
